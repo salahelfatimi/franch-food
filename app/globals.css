@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary: #3A6ECF;
+  --color-secondary: #FFD340;
+  --color-background: #99BDFF;
+  --font-primary:'ClashDisplay-Variable';
+  --animate-bounceCostomize: bounce-to-top 4s infinite;
+  --animate-scrollright: scroll-right-continuous 20s linear infinite;
+
+}
+@keyframes scroll-right-continuous {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes bounce-to-top {
+  0%, 100% {
+    transform: translateY(0); /* Start and end at original position */
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(-50px); /* Control bounce height here */
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@font-face {
+  font-family: 'ClashDisplay-Variable';
+  src: url('/font/ClashDisplay-Variable.woff2') format('woff2'),
+       url('/font/ClashDisplay-Variable.woff') format('woff'),
+       url('/font/ClashDisplay-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+}
