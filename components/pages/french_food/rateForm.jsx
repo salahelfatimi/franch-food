@@ -25,7 +25,7 @@ export default function RateForm() {
             <div className=" bg-white border shadow-2xl border-black p-2 lg:p-6 lg:pb-20 relative z-20 lg:rotate-3 lg:animate-bounceCostomize m-4">
                 <div className="bg-primary flex flex-col gap-4 p-6 lg:p-10 border border-black">
                     <h2 className="font-primary font-semibold text-white text-2xl lg:text-4xl text-center">
-                    😋 ÉVALUEZ VOTRE EXPÉRIENCE 😋
+                        ÉVALUEZ VOTRE EXPÉRIENCE 
                     </h2>
                     <div className="flex flex-col lg:flex-row gap-4">
                         <div className="flex flex-col font-primary gap-2 text-white">
