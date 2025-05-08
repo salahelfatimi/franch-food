@@ -47,7 +47,7 @@ export default function Offres(){
             {
                 showOffres == true && offres == 2 && (
                     <div className=" p-5 lg:p-10 flex flex-col justify-center items-center gap-10">
-                        <div className=" flex flex-col lg:flex-row gap-10 items-center justify-center container mx-auto">
+                        <div className=" flex flex-col lg:flex-row gap-10 items-center justify-center  ">
                             <Image src={'/img/offres/juice.png'} quality={20} width={500} height={500} className=" w-52 rotate-6 animate-bounceCostomize" alt="french food" title="french food"/>
                             <div className="lg:w-full text-lg lg:text-3xl font-medium uppercase space-y-2">
                                 <h3 className="font-primary font-bold ">- 1 Litre de Fraîcheur Offert !</h3>
@@ -65,11 +65,11 @@ export default function Offres(){
             {
                 showOffres == true && offres == 3 && (
                     <div className=" p-5 lg:p-10 flex flex-col gap-10 items-center justify-center">
-                        <div className=" flex flex-col lg:flex-row gap-10 items-center justify-center container mx-auto">
+                        <div className=" flex flex-col lg:flex-row gap-10 items-center justify-center ">
                             <Image src={'/img/offres/pizza.png'} quality={20} width={500} height={500} className=" w-96 rotate-6 animate-bounceCostomize" alt="french food" title="french food"/>
                             <div className=" lg:w-full text-lg lg:text-3xl font-medium uppercase space-y-2">
                                 <h3 className="font-primary font-bold ">- 1 Pizza Gratuite ? Oui Chef !</h3>
-                                <p className=" font-primary">C’est pas de la magie, c’est juste notre façon de dire merci avec du fromage 🧀😋</p>
+                                <p className=" font-primary">C’est pas de la magie, c’est juste notre façon de dire <br className=" hidden lg:block" /> merci avec du fromage 🧀😋</p>
                             </div>
                         </div>
                         <div className=" flex gap-10 items-center justify-center" onClick={handleOffre}>
