@@ -19,7 +19,7 @@ export default function Header(){
         <div>
             <div className=" relative  h-screen ">
                 <div className=" bg-black opacity-60 absolute inset-0 "></div>
-                <video alt="la Résidence Eden Marrakech" title="la Résidence Eden Marrakech" width="100%" height="100%" autoPlay loop playsInline muted className=" w-full h-full object-cover " >
+                <video alt="french food" title="french food" width="100%" height="100%" autoPlay loop playsInline muted className=" w-full h-full object-cover " >
                     <source src="/vid/header-franch-food.mp4" type="video/mp4" />
                 </video>
                 <div className=" z-20 flex p-4 flex-col gap-4 items-center justify-center container mx-auto absolute inset-0">
