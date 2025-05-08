@@ -14,12 +14,17 @@ export default function RateForm() {
         <div className="min-h-screen flex flex-col items-center justify-center bg-primary relative  ">
             <div className="w-full overflow-hidden whitespace-nowrap absolute inset-0 flex flex-col justify-center">
                 <div className="animate-scrollright font-primary text-8xl uppercase font-bold text-white rotate-3">
-                    <span className="px-4">Le poulet de votre quartier , croustillant et savoureux ! 🤪</span>
-                    <span className="px-4">Le poulet de votre quartier , croustillant et savoureux ! 🤪</span>
+                    <span className="px-4">Le poulet de votre quartier , croustillant et savoureux ! </span>
+                    <span className="px-4">Le poulet de votre quartier , croustillant et savoureux ! </span>
                 </div>
                 <div className="animate-scrollright font-primary text-8xl uppercase font-bold text-white rotate-3">
-                    <span className="px-4">La légende croustillante que tes papilles attendaient ! 😋</span>
-                    <span className="px-4">La légende croustillante que tes papilles attendaient ! 😋</span>
+                    <span className="px-4">😋 🤤 🤩 😍 😎 🤙 💯 🔥 🧨 🎉 💥 🚀</span>
+                    <span className="px-4">😋 🤤 🤩 😍 😎 🤙 💯 🔥 🧨 🎉 💥 🚀</span>
+                    <span className="px-4">😋 🤤 🤩 😍 😎 🤙 💯 🔥 🧨 🎉 💥 🚀</span>
+                </div>
+                <div className="animate-scrollright font-primary text-8xl uppercase font-bold text-white rotate-3">
+                    <span className="px-4">La légende croustillante que tes papilles attendaient ! </span>
+                    <span className="px-4">La légende croustillante que tes papilles attendaient ! </span>
                 </div>
             </div>
             <div className=" bg-white border shadow-2xl border-black p-2 lg:p-6 lg:pb-20 relative z-20 lg:rotate-3 lg:animate-bounceCostomize m-4">
