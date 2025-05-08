@@ -4,22 +4,16 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export default function Header(){
-    const [showButtons, setShowButtons] = useState(false); // State to toggle additional buttons
-    const dropdownRef = useRef(null); // Ref for the dropdown container
+    const [showButtons, setShowButtons] = useState(false); 
+    const dropdownRef = useRef(null); 
 
-    const toggleButtons = () => {
-        setShowButtons(!showButtons); // Toggle the visibility of the buttons
-    };
+    const toggleButtons = () => {setShowButtons(!showButtons);}
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setShowButtons(false); // Hide the buttons
-            }
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {setShowButtons(!showButtons); }
         };
         document.addEventListener("mousedown", handleClickOutside);
-        return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
+        return () => { document.removeEventListener("mousedown", handleClickOutside);};
     }, []);
     return(
         <div>
@@ -33,7 +27,7 @@ export default function Header(){
                     <div className=" flex lg:flex-row flex-col items-center gap-4">
                         <Link href={'#'} className=" bg-primary text-white font-primary px-6 py-2 lg:text-lg text-sm rounded-full  font-semibold uppercase hover:bg-transparent border-2 border-primary hover:border-white hover:text-white duration-700 flex items-center justify-center gap-1"><Drumstick /> Je veux du fried chicken ! </Link>
                         <div className=" relative">
-                            <button onClick={toggleButtons} className="bg-white text-primary font-primary px-6 py-2 lg:text-lg text-sm rounded-full font-semibold uppercase hover:bg-transparent hover:text-white border-2 border-white duration-700 flex items-center justify-center gap-1" > <Bike /> Commandez avec Glovo & Hayaku </button>
+                            <button onClick={toggleButtons} className=" cursor-pointer bg-white text-primary font-primary px-6 py-2 lg:text-lg text-sm rounded-full font-semibold uppercase hover:bg-transparent hover:text-white border-2 border-white duration-700 flex items-center justify-center gap-1" > <Bike /> Commandez avec Glovo & Hayaku </button>
                             {showButtons && (
                                 <div className="flex flex-col gap-2 items-center lg:items-start justify-center w-full lg:w-fit absolute pt-2" ref={dropdownRef}>
                                     <Link href={"#menu"} className="bg-primary text-white font-primary px-6 py-2 lg:text-base text-sm rounded-full font-semibold uppercase hover:bg-transparent border-2 border-primary hover:border-white hover:text-white duration-700" >Commandez avec Hayaku</Link>

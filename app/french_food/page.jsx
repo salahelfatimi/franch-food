@@ -1,4 +1,5 @@
 import Header from "@/components/pages/french_food/header";
+import Offres from "@/components/pages/french_food/offres";
 import RateForm from "@/components/pages/french_food/rateForm";
 import ScrollFood from "@/components/pages/french_food/scrollFood";
 
@@ -7,6 +8,7 @@ export default function FrenchFood(){
         <div>
             <Header/>
             <ScrollFood/>
+            <Offres/>
             <RateForm/>
             <div className="  flex flex-col gap-4 pt-10">
                 <h2 className=" font-primary text-center text-3xl lg:text-6xl font-semibold uppercase"><span className=" text-primary">T’as faim ?</span> Suis la bonne adresse ! 😋</h2>
