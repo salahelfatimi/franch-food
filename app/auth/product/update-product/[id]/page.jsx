@@ -14,6 +14,7 @@ function ProductUpdate() {
   const [formData, setFormData] = useState({
     name: "",
     description: "",
+    imageKey:"",
     price: "",
     category:"",
     image: null,
@@ -78,6 +79,7 @@ function ProductUpdate() {
         formDataToSend.append("description", formData.description);
         formDataToSend.append("price", formData.price);
         formDataToSend.append("category", formData.category);
+        formDataToSend.append("imageKey", formData.imageKey);
         formDataToSend.append("image", formData.image);
         formDataToSend.append("imageUrl", formData.imageUrl);
         formDataToSend.append("customOptions",JSON.stringify(formData.customOptions));

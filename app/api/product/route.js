@@ -103,24 +103,26 @@ export async function PUT(req) {
   const price = parseFloat(formData.get("price"));
   const category = formData.get("category");
   const customOptionsRaw = formData.get("customOptions");
+  const imageKey = formData.get("imageKey");
   const file = formData.get("image");
   const imageUrl = formData.get("imageUrl");
-
-  console.log(formData);
-
+  console.log("Image Key:", imageKey);
   // Validate required fields
   if (!id || !name || !description || !category || !price || !customOptionsRaw) {
     return NextResponse.json({ error: "Missing required fields." }, { status: 400 });
   }
 
   try {
-    // Handle image upload or use existing image URL
-    const imageUrlData = file && file !== "undefined" ? (await utapi.uploadFiles(file)).data.ufsUrl : imageUrl;
-
-    // Parse custom options
+    let newImageUrl = imageUrl; 
+    let newImageKey = imageKey; 
+    
+    if (file) {
+      await utapi.deleteFiles(imageKey);
+      const imageUrlData = await utapi.uploadFiles(file); 
+      newImageUrl = imageUrlData.data.ufsUrl; 
+      newImageKey = imageUrlData.data.key;
+    }
     const customOptions = JSON.parse(customOptionsRaw);
-
-    // Update the product
     await prisma.product.update({
       where: { id: parseInt(id) },
       data: {
@@ -128,7 +130,8 @@ export async function PUT(req) {
         description,
         price,
         category,
-        imageUrl: imageUrlData,
+        imageUrl: newImageUrl, 
+        imageKey: newImageKey, 
         customOptions: {
           deleteMany: {}, // Delete existing custom options
           create: customOptions.map((option) => ({
@@ -145,4 +148,3 @@ export async function PUT(req) {
     return NextResponse.json({ error: "Database error." }, { status: 500 });
   }
 }
-

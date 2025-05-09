@@ -10,7 +10,6 @@ export default function ProductDashboard() {
     const [products, setProducts] = useState([]); // State to store fetched products
     const [loading, setLoading] = useState(true); // State to manage loading state
     const [error, setError] = useState(null); // State to manage errors
-    console.log(products);
 
     useEffect(() => {
         const fetchProducts = async () => {
