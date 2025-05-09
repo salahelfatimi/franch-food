@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { utapi } from "@/utils/uploadthing";
-import { PrismaClient } from "@prisma/client";
 import { redirect } from "next/dist/server/api-utils";
+import { PrismaClient } from '/prisma/app/generated/prisma/client'
+
 const prisma = new PrismaClient();
 
 export async function POST(req) {
