@@ -47,7 +47,7 @@ export default function ScrollFood(){
                     <div className="flex flex-row gap-20 pl-20">
                         {products.map((product,index) => (
                             <div key={index} className="flex flex-col gap-3 group cursor-pointer ">
-                                <Image src={product.imageUrl}  alt={product.name} title={product.name}  width={1000} height={1000} className=" group-hover:scale-95 duration-700 min-w-80 min-h-80 object-cover rounded-full shadow-2xl border-4 border-primary" />
+                                <Image src={product.imageUrl}  alt={product.name} title={product.name}  width={1000} height={1000} className=" group-hover:scale-95 duration-700 max-w-80 min-h-80 object-cover rounded-full shadow-2xl border-4 border-primary" />
                                 <h3 className=" font-primary text-4xl font-medium text-center">{product.name}</h3>
                                 <p className=" font-primary text-sm text-center">{product.description}</p>
                                 <p className=" font-primary text-sm text-center">{product.price} MAD</p>
