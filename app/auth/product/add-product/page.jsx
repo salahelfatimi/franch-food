@@ -1,11 +1,12 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React, { useState, useRef } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 function ProductForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [validation, setValidation] = useState(false);
-
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -72,7 +73,9 @@ function ProductForm() {
                 image: null,
                 customOptions: [{ name: "", price: "" }],
             });
-            if (fileInputRef.current) fileInputRef.current.value = "";setValidation(false);} 
+            if (fileInputRef.current) fileInputRef.current.value = "";setValidation(false);
+            router.push("/auth/product/show-product");
+          } 
             else {throw new Error("Failed to upload");}
         } catch (err) {
             toast.dismiss(loadingToast);

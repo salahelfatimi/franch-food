@@ -70,7 +70,7 @@ export default function ProductDashboard() {
                     {
                         products.map((product) => (
                             <div key={product.id} className="bg-white shadow-2xl p-4 mb-4 rounded-lg border-2 border-primary w-fit flex flex-col items-center gap-4">
-                                <Image src={product.imageUrl}  alt={product.name} title={product.name} width={500} height={500} className=" h-72 shadow-xl  object-cover rounded-2xl"/>
+                                <Image src={product.imageUrl}  alt={product.name} title={product.name} width={500} height={500} className=" h-72 object-cover rounded-2xl"/>
                                 <h2 className="text-3xl font-bold text-primary font-primary uppercase">{product.name}</h2> 
                                 <p className="text-lg font-semibold text-primary font-primary uppercase">{product.price} MAD</p>
                                 <p className="font-semibold text-primary font-primary uppercase">Category : {product.category}</p>
